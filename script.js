@@ -59,8 +59,10 @@ class Calculator {
 
     updateDisplay() {
         this.currentOperandTextElement.innerText = this.currentOperand
-        this.previousOperandTextElement.innerText = this.previousOperand
+        this.previousOperandTextElement.innerText = 
+            this.operation ? `${this.previousOperand} ${this.operation}` : this.previousOperand
     }
+    
 }
 
 const numberButtons = document.querySelectorAll('[data-number]')
